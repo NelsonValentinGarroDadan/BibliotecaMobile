@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_Biblioteca">
+
+    <fragment
+        android:id="@+id/nav_Biblioteca"
+        android:name="com.example.recuperatoriomoviles.ui.Biblioteca.BibliotecaFragment"
+        android:label="Biblioteca"
+        tools:layout="@layout/fragment_biblioteca" >
+        <action
+            android:id="@+id/action_nav_Biblioteca_to_nav_Detalles"
+            app:destination="@id/nav_Detalles" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_Salir"
+        android:name="com.example.recuperatoriomoviles.ui.Salir.SalirFragment"
+        android:label="Salir"
+        tools:layout="@layout/fragment_salir" />
+    <fragment
+        android:id="@+id/nav_Detalles"
+        android:name="com.example.recuperatoriomoviles.DetalleLibroFragment"
+        android:label="Detalles del Libro"
+        tools:layout="@layout/fragment_salir" >
+        <action
+            android:id="@+id/action_nav_Detalles_to_nav_Biblioteca"
+            app:destination="@id/nav_Biblioteca" />
+    </fragment>
+</navigation>
